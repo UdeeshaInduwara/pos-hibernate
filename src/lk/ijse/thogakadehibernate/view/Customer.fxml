@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="520.0" prefWidth="660.0" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.thogakadehibernate.controller.CustomerController">
+   <children>
+      <JFXTextField fx:id="txtCustomerID" layoutX="35.0" layoutY="49.0" prefHeight="25.0" prefWidth="200.0" promptText="Customer ID" />
+      <JFXTextField fx:id="txtCustomerName" layoutX="280.0" layoutY="49.0" prefHeight="25.0" prefWidth="200.0" promptText="Name" />
+      <JFXTextField fx:id="txtContactNo" layoutX="280.0" layoutY="102.0" prefHeight="25.0" prefWidth="200.0" promptText="Contact Number" />
+      <JFXTextField fx:id="txtAddress" layoutX="35.0" layoutY="102.0" prefHeight="25.0" prefWidth="200.0" promptText="Address" />
+      <TableView fx:id="tblCustomers" layoutX="22.0" layoutY="192.0" onMouseClicked="#selectCustomersFromTbl" prefHeight="244.0" prefWidth="617.0">
+         <columns>
+            <TableColumn prefWidth="100.0" text="Customer ID" />
+            <TableColumn prefWidth="179.0" text="Name" />
+            <TableColumn minWidth="0.0" prefWidth="183.0" text="Address" />
+            <TableColumn prefWidth="146.0" text="Contact Number" />
+         </columns>
+      </TableView>
+      <JFXButton fx:id="btnAdd" buttonType="RAISED" layoutX="530.0" layoutY="142.0" onAction="#addCustomer" prefHeight="25.0" prefWidth="110.0" style="-fx-background-color: #00b8b8;" text="Add" textFill="WHITE" />
+      <JFXButton fx:id="btnUpdate" buttonType="RAISED" layoutX="409.0" layoutY="142.0" onAction="#updateCustomer" prefHeight="25.0" prefWidth="110.0" style="-fx-background-color: #d2cb09;" text="Update" textFill="WHITE" />
+      <JFXButton fx:id="btnDelete" buttonType="RAISED" layoutX="530.0" layoutY="456.0" onAction="#deleteCustomer" prefHeight="25.0" prefWidth="110.0" style="-fx-background-color: #da1178;" text="Delete" textFill="WHITE" />
+   </children>
+</AnchorPane>
